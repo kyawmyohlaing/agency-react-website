@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+Additional Notes
+
+Convert Bootstrap web to React Website
+1. Copy files (css , img, js, vendor) in public folder of bootstrap to public folder of react.
+2. Add .env file included " SKIP_PREFLIGHT_CHECK=true" to root.
+3. 
