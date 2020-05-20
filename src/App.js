@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PageWrapper from './components/PageWrapper';
 import Home from './pages/Home';
+import About from './pages/About';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 class App extends Component {
@@ -11,20 +12,16 @@ class App extends Component {
         
          <PageWrapper>
          <Route 
-            exact='true'
+           
             path="/"
             component={Home}
          />
          <Route 
-            
-            path="/a"
-            render={() => {
-              return(
-                <h1>I am /a Router</h1>
-              )
-            }
-            }
-         />
+           
+           path="/about"
+           component={About}
+        />
+         
            
          </PageWrapper>
       </Router>
