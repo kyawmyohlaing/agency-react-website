@@ -11,8 +11,19 @@ class App extends Component {
         
          <PageWrapper>
          <Route 
+            exact='true'
             path="/"
             component={Home}
+         />
+         <Route 
+            
+            path="/a"
+            render={() => {
+              return(
+                <h1>I am /a Router</h1>
+              )
+            }
+            }
          />
            
          </PageWrapper>
