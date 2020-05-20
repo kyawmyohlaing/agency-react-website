@@ -73,4 +73,8 @@ Additional Notes
 Convert Bootstrap web to React Website
 1. Copy files (css , img, js, vendor) in public folder of bootstrap to public folder of react.
 2. Add .env file included " SKIP_PREFLIGHT_CHECK=true" to root.
-3. 
+3. class=" to className="
+4. {this.props.children} in wrapper ( <wrapper> <home></home> <wrapper>)
+3. npm install --save react-router-dom
+4. Replace <a to <Link and </a  to </Link>
+5. href= to to=
