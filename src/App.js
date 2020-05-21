@@ -5,6 +5,7 @@ import About from './pages/About';
 import Team from './pages/Team';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 
@@ -34,6 +35,11 @@ class App extends Component {
            
            path="/portfolio"
            component={Portfolio}
+        />
+        <Route 
+           
+           path="/services"
+           component={Services}
         />
         <Route 
            
