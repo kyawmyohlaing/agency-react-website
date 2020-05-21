@@ -3,7 +3,9 @@ import PageWrapper from './components/PageWrapper';
 import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
+import Portfolio from './pages/Portfolio';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
 
 class App extends Component {
 
@@ -26,6 +28,11 @@ class App extends Component {
            
            path="/team"
            component={Team}
+        />
+        <Route 
+           
+           path="/portfolio"
+           component={Portfolio}
         />
          
            

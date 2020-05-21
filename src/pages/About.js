@@ -14,7 +14,9 @@ class About extends Component{
                 </div>
                 <ul className="timeline">
                     <li>
-                        <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
+                        <div className="timeline-image">
+                            <img className="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" />
+                        </div>
                         <div className="timeline-panel">
                             <div className="timeline-heading">
                                 <h4>2009-2011</h4>
