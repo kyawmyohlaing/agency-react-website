@@ -1,12 +1,29 @@
 import React, {Component} from 'react';
 import PageWrapper from './components/PageWrapper';
-import Home from './pages/Home';
-import About from './pages/About';
-import Team from './pages/Team';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
+
+//Pages
+import Home from './component/Pages/Home';
+import About from './component/Pages/About';
+import Team from './component/Pages/Team';
+import Portfolio from './component/Pages/Portfolio';
+import Contact from './component/Pages/Contact';
+import Services from '.component/Pages/Services';
+import Blog from './components/Pages/Blog';
+import Single from './components/Pages/Single';
+import Login from './components/Pages/Login';
+import Signup from './components/Pages/Signup';
+
+//Admin Pages
+import Dashboard from './components/Pages/Admin/Dashboard';
+import Users from './components/Pages/Admin/Users';
+import Posts from './components/Pages/Admin/Posts';
+import AddPost from './components/Pages/Admin/AddPost';
+
+import AdminWrapper from './components/AdminWrapper';
+import LoginWrapper from './components/LoginWrapper';
+
 
 
 class App extends Component {
@@ -45,6 +62,21 @@ class App extends Component {
            
            path="/contact"
            component={Contact}
+        />
+        <Route 
+           exact={true}
+           path="/signup"
+           render={props => {
+              if (this.props.auth.token){
+                 return (
+                    <Redirect to="/" />
+                 )
+              }else{
+                 <LoginWrapper>
+                    <Signup />
+                 </LoginWrapper>
+              }
+           }}
         />
          
            
