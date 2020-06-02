@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import Header from '../Common/Header';
 import API from '../../utils/api';
 import siteActions from '../../store/actions/siteActions';
+import {Link} from 'react-router-dom';
+import CommentBuilder from '../components/CommentBuilder';
 
 class Single extends Component{
 
@@ -28,6 +30,17 @@ class Single extends Component{
                     <div className="col-md-9">
                         <div className="post-content" dangerouslySetInnerHTML={{__html: this.props.site.post.content}}>
 
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h3>comment</h3>
+                            {this.props.auth.token ?
+                            <CommentBuilder />
+                            :
+                            <p>Need an account? <Link to="/signup">Signup</Link></p>    
+                        }
                         </div>
                     </div>
                 </div>
